@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Aiqspire - Blog Request</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+
+<div class="wrapper">
+
+  <!-- LEFT -->
+  <div class="left">
+    <div class="logo">Aiqspire</div>
+    <div class="tagline">Transform ideas into impactful blogs</div>
+    <div class="description">
+      Submit blog requirements with precision. Define technical depth,
+      audience, and tone to generate structured, high-quality content.
+    </div>
+  </div>
+
+  <!-- RIGHT -->
+  <div class="right">
+    <h1>Blog Request</h1>
+
+    <!-- Hidden iframe -->
+    <iframe name="hidden_iframe" style="display:none;"></iframe>
+
+    <form 
+      id="blogForm"
+      action="https://docs.google.com/forms/d/e/1FAIpQLScfdAOC4bpLZTf6FjZ4CIqxyRTSzHW1v20pbJm-W-KtymEbWQ/formResponse"
+      method="POST"
+      target="hidden_iframe"
+    >
+
+      <div class="form-group">
+        <label>Blog Topic *</label>
+        <input type="text" name="entry.795738643" placeholder="Enter the main topic of your blog" required />
+      </div>
+
+      <div class="form-group">
+        <label>Technicality *</label>
+        <select name="entry.623731193" required>
+          <option value="">Select</option>
+          <option value="Beginner">Beginner</option>
+          <option value="Intermediate">Intermediate</option>
+          <option value="Advanced">Advanced</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label>Tone *</label>
+        <select name="entry.1259128368" required>
+          <option value="">Select</option>
+          <option value="Descriptive">Descriptive</option>
+          <option value="Technical (Instructive)">Technical (Instructive)</option>
+          <option value="Descritive + Technical">Descritive + Technical</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label>Audience *</label>
+        <input type="text" name="entry.1173390635" placeholder="e.g., Beginners, Developers, Enterprise" required />
+      </div>
+
+      <div class="form-group">
+        <label>Description</label>
+        <textarea name="entry.1725234853" placeholder="Provide additional details or specific requirements for your blog"></textarea>
+      </div>
+
+      <div class="advanced-options-wrapper">
+        <button type="button" class="advanced-toggle">
+          <span class="toggle-text">Advanced Options</span>
+          <span class="toggle-icon">▼</span>
+        </button>
+        
+        <div class="advanced-options" id="advancedOptions">
+          <div class="form-group">
+            <div class="label-with-info">
+              <label>Secret Key</label>
+              <button type="button" class="info-button" id="infoButton" title="Click for info">
+                <span class="info-icon">ℹ</span>
+              </button>
+              <div class="info-tooltip" id="infoTooltip">
+                Secret key is used to validate and authenticate your blog requests, ensuring secure access to premium features and personalized content generation.
+              </div>
+            </div>
+            <input type="text" name="entry.1298498127" placeholder="Enter your secret key (optional)" />
+          </div>
+        </div>
+      </div>
+
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+
+</div>
+
+<!-- Toast -->
+<div id="toast" class="toast">Submitted successfully</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
